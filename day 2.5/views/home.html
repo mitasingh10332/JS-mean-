@@ -1,0 +1,23 @@
+<!--
+<link rel="stylesheet" href="\stylesheet\style.css">
+
+<a href="https://www.youtube.com/">MEAN STACK!</a> <br>
+<img src="\images\abc.png" width="300">
+<video src="\video\avideo.mp4" controls width="300"></video>
+-->
+
+
+<table border="1" >
+    <tr>
+    <th>enrollment</th>
+    <th>name</th>
+    <th>dept</th>
+    </tr>
+    <% for(i in student){ %>
+        <tr>
+        <td> <%=students[i].enroll %> </td>
+        <td> <%=students[i].name %> </td>
+        <td> <%=students[i].dept %> </td>
+    </tr>
+    <%} %>
+</table>

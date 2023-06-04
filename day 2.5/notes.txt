@@ -1,0 +1,24 @@
+const express = require("express");
+
+This line imports the Express.js module, which is a web framework for Node.js. It allows you to create web applications and define routes.
+const bodyParser = require("body-parser");
+
+This line imports the body-parser module, which helps in parsing the data from incoming HTTP requests.
+const app = express();
+
+This line creates a new Express application by calling the express() function. The app object represents your Express application and is used to define routes and set up middleware.
+app.use(express.static('public'));
+
+This line sets up static file serving. It tells Express to serve static files from the "public" directory. Static files can include CSS stylesheets, JavaScript files, images, etc. This allows the client to directly access these files without any additional processing.
+app.engine("html", require("ejs").renderFile);
+
+This line configures Express to use the EJS (Embedded JavaScript) templating engine to render HTML files. It associates the EJS module's renderFile function with the ".html" file extension. EJS allows you to dynamically generate HTML content by embedding JavaScript code within HTML templates.
+app.set("view engine", "html");
+
+This line sets the default view engine to "html". It tells Express to use the EJS engine for rendering views. When you render a view or template, Express will assume that the file has the ".html" extension and use EJS to process it.
+app.use(bodyParser.urlencoded({extended:false}));
+
+This line adds the body-parser middleware to the Express application. It enables parsing of URL-encoded data from incoming requests. URL-encoded data is commonly used in form submissions. The middleware parses this data and makes it available in the req.body object.
+app.listen(3000);
+
+This line starts the Express application and makes it listen on port 3000 for incoming HTTP requests. Once the server is running, it can handle and respond to requests from clients.
