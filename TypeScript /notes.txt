@@ -1,0 +1,10 @@
+install angular using:- npm i @angular/cli -g (globally) (cli:- command line interface) - version 16
+error solve krne ke liye google pr paste kre( ng v hi use kre.);
+for making new file:-  ng new myapp (by default css)
+for checking the angular version:- ng v  
+to run the angular server :-  ng serve
+run in web browser:- http://localhost:4200
+
+
+myapp-> ng serve
+{{}} -> use variable of ts(inside class AppComponent) in js
